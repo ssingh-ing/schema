@@ -1,0 +1,176 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "complexity": {
+        "type": "string"
+      },
+      "promptpatterns": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "type": {
+        "type": "string"
+      },
+      "version": {
+        "type": "string"
+      },
+      "domain": {
+        "type": "string"
+      },
+      "personality": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "responsibility": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "role",
+          "responsibility",
+          "skills"
+        ]
+      },
+      "instructions": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string"
+          },
+          "taskgoal": {
+            "type": "string"
+          },
+          "taskinstrctions": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "task",
+          "taskgoal",
+          "taskinstrctions"
+        ]
+      },
+      "examples": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "input": {
+                "type": "string"
+              },
+              "output": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "description",
+              "input",
+              "output"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "input": {
+                "type": "string"
+              },
+              "output": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "description",
+              "input",
+              "output"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "input": {
+                "type": "string"
+              },
+              "output": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "description",
+              "input",
+              "output"
+            ]
+          }
+        ]
+      },
+      "outputformats": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "format": {
+                "type": "string"
+              },
+              "example": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "description",
+              "type",
+              "format",
+              "example"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "title",
+      "description",
+      "complexity",      
+      "type",
+      "version",
+      "domain",
+      "personality",
+      "instructions"     
+    ]
+  }
