@@ -71,7 +71,7 @@
             "description": "Clear Goal definition of the task(e.g. generate accuarte system health report, identify root cause of issues identfied in the logs, classify user intent of the user request, etc)",
             "type": "string"
           },
-          "task_instrctions": {
+          "task_instructions": {
             "description": "Instructions for the task(e.g. steps to analyze the logs, steps to identify the errors and warnings, steps to analyze Sql Query results etc)",
             "type": "string"
           },
