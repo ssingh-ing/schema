@@ -1,49 +1,56 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://raw.githubusercontent.com/ssingh-ing/schema/5ffafbae82979ed31c22bb9f963fbd7ab42134b9/promptgroundingschema.json",
+    "title": "Prompt Grounding Schema",
+    "description": "Standard schema for defining prompts for openai and claude",
     "type": "object",
     "properties": {
       "title": {
+        "description": "Title of the prompt.",
         "type": "string"
       },
       "description": {
+        "description": "Description of the prompt.",
         "type": "string"
       },
       "complexity": {
+        "description": "Complexity level of the prompt (low, medium, high).",
         "type": "string"
       },
       "promptpatterns": {
         "type": "array",
+        "description": "List of prompt patterns(chain of thoughts, step back,self consistency, reason and act, etc).",
         "items": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "string"
-          },
           {
             "type": "string"
           }
         ]
       },
       "type": {
+        "description": "type of LLM capabilities used(summarization, Q&A, Name Entity extraction, correlation, etc). ",
         "type": "string"
       },
       "version": {
+        "description": "prompt version number.",
         "type": "string"
       },
       "domain": {
+        "description": "Domain of the prompt(it operations, hr, finance, etc).",
         "type": "string"
       },
       "personality": {
         "type": "object",
         "properties": {
           "role": {
+            "description": "Role of the persona (e.g. HR Manager, IT Admin, etc)",
             "type": "string"
           },
           "responsibility": {
+            "description": "Responsibility of the persona(e.g. hiring, onboarding, system health monitoring, L1 Suppoort etc)",
             "type": "string"
           },
           "skills": {
+            "description": "Skills of the persona (e.g. communication, problem solving, technical skills, log analysis etc)",
             "type": "string"
           }
         },
@@ -57,12 +64,15 @@
         "type": "object",
         "properties": {
           "task": {
+            "description": "Task to be performed ( e.g. log analysis, log corelations, data structured query, etc)",
             "type": "string"
           },
-          "taskgoal": {
+          "task_goal": {
+            "description": "Clear Goal definition of the task(e.g. generate accuarte system health report, identify root cause of issues identfied in the logs, classify user intent of the user request, etc)",
             "type": "string"
           },
-          "taskinstrctions": {
+          "task_instrctions": {
+            "description": "Instructions for the task(e.g. steps to analyze the logs, steps to identify the errors and warnings, steps to analyze Sql Query results etc)",
             "type": "string"
           }
         },
@@ -72,57 +82,28 @@
           "taskinstrctions"
         ]
       },
-      "examples": {
+      "relevant_context":
+      {
+        "description": "Relevant context for the task(e.g. application logs, infrastrcuture logs, sql query results, user request, etc)",
+        "type":"string"
+      },
+      "examples": {     
         "type": "array",
         "items": [
           {
             "type": "object",
             "properties": {
-              "description": {
+              "description":
+               {
+                "description": "Description of the example",
                 "type": "string"
               },
               "input": {
+                "description": "Input of the example - user's request or query",
                 "type": "string"
               },
               "output": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "description",
-              "input",
-              "output"
-            ]
-          },
-          {
-            "type": "object",
-            "properties": {
-              "description": {
-                "type": "string"
-              },
-              "input": {
-                "type": "string"
-              },
-              "output": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "description",
-              "input",
-              "output"
-            ]
-          },
-          {
-            "type": "object",
-            "properties": {
-              "description": {
-                "type": "string"
-              },
-              "input": {
-                "type": "string"
-              },
-              "output": {
+                "description": "desired output or response from agent",
                 "type": "string"
               }
             },
@@ -132,7 +113,7 @@
               "output"
             ]
           }
-        ]
+        ]        
       },
       "outputformats": {
         "type": "array",
@@ -141,15 +122,19 @@
             "type": "object",
             "properties": {
               "description": {
+                "description": "Description of the output format",
                 "type": "string"
               },
               "type": {
+                "description": "Type of the output format - html, markdown, text, etc",
                 "type": "string"
               },
               "format": {
+                "description": "output Format template ",
                 "type": "string"
               },
               "example": {
+                "description": "Example of the output format",
                 "type": "string"
               }
             },
