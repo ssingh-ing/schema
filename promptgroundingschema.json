@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "$id": "https://raw.githubusercontent.com/ssingh-ing/schema/5ffafbae82979ed31c22bb9f963fbd7ab42134b9/promptgroundingschema.json",
+    "$id": "https://raw.githubusercontent.com/ssingh-ing/schema/main/promptgroundingschema.json",
     "title": "Prompt Grounding Schema",
     "description": "Standard schema for defining prompts for openai and claude",
     "type": "object",
