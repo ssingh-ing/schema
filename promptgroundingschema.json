@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "$id": "https://raw.githubusercontent.com/ssingh-ing/schema/main/promptgroundingschema.json",
+    "$id": "https://github.com/ssingh-ing/schema/blob/main/promptgroundingschema.json",
     "title": "Prompt Grounding Schema",
     "description": "Standard schema for defining prompts for openai and claude",
     "type": "object",
@@ -73,6 +73,10 @@
           },
           "task_instrctions": {
             "description": "Instructions for the task(e.g. steps to analyze the logs, steps to identify the errors and warnings, steps to analyze Sql Query results etc)",
+            "type": "string"
+          },
+          "additional_instructions": {
+            "description": "Additional instructions (e.g. use of specific tone, use of specific style, use of specific emotion, etc)",
             "type": "string"
           }
         },
